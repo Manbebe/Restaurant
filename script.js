@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     
-    // menu items with there prices
+    // menu items with the prices
     const menuItems = [
         { name: 'Burger', price: 5 },
         { name: 'Pizza', price: 8 },
