@@ -14,3 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.appendChild(menuItem);
     });
 });
+document.getElementById('skipDayButton').addEventListener('click', () => {
+    // says "Skip Day" when button is clicked
+    console.log('Day skipped');
+});
