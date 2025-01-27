@@ -70,3 +70,11 @@ button:hover {
     padding: 10px;
     border: 1px solid #ccc;
 }
+
+#orderForm {
+    margin-bottom: 20px;
+}
+
+#results, #earnings {
+    margin-bottom: 20px;
+}
