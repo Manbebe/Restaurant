@@ -11,17 +11,21 @@
     <div id="menu"></div>
     <form id="orderForm">
         <label for="item">Select Item:</label>
+        <!--Items in the drop down-->
         <select id="item" name="item">
-            <option value="Burger">Burger</option>
-            <option value="Pizza">Pizza</option>
-            <option value="Fries">Fries</option>
+            <option value="cheeseburger">Cheeseburger</option>
+            <option value="hamburger">Hamburger</option>
+            <option value="pizza">Pizza</option>
+            <option value="fries">Fries</option>
+            <option value="chickentenders">Chicken tenders</option>
+
         </select>
         <!-- Form fields for ordering -->
         <button type="submit">Place Order</button>
     </form>
     <div id="results">
         <h2>Order Summary</h2>
-        <ul id="earnings"></ul>
+        <ul id="orderSummary"></ul>
     </div>
     <div id="earnings">
         <h2>Total Earnings: $

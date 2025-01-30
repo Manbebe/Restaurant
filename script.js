@@ -1,11 +1,35 @@
+const orderForm = document.getElementById('orderForm');
+const orderSummary = document.getElementById('orderSummary');
+const totalEarnings = document.getElementById('totalEarnings');
+let earnings = 0;
+document.getElementById('orderForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const item = document.getElementById('item').value;
+    const price = parseFloat(document.getElementById('price').value);
+
+    // Update order summary
+    const listItem = document.createElement('li');
+    listItem.textContent = `${item}: $${price.toFixed(2)}`;
+    orderSummary.appendChild(listItem);
+
+    // Update total earnings
+    earnings += price;
+    totalEarnings.textContent = earnings.toFixed(2);
+
+    // Clear form fields
+    orderForm.reset();
+});
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
-    
+
     // menu items with the prices
     const menuItems = [
-        { name: 'Burger', price: 5 },
-        { name: 'Pizza', price: 8 },
-        { name: 'fries', price: 4 }
+        { name: 'Cheeseburger', price: 5 },
+        { name: 'Hamburger', price: 4 },
+        { name: 'Pizza', price: 3 },
+        { name: 'fries', price: 2 },
+        { name: 'Chicken tenders', price: 5 }
     ];
 
     menuItems.forEach(item => {
@@ -17,4 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('skipDayButton').addEventListener('click', () => {
     // says "Skip Day" when button is clicked
     console.log('Day skipped');
+});
+document.getElementById('restockButton').addEventListener('click', () => {
+    // says "Skip Day" when button is clicked
+    console.log('Restocked');
 });
