@@ -2,11 +2,18 @@ const orderForm = document.getElementById('orderForm');
 const orderSummary = document.getElementById('orderSummary');
 const totalEarnings = document.getElementById('totalEarnings');
 let earnings = 0;
+
 document.getElementById('orderForm').addEventListener('submit', (event) => {
+    const selectedItem = document.getElementById('item').value;
+    const menuItem = menuItems.find(item => item.name.toLowerCase() === selectedItem);
+    const price = menuItem ? menuItem.price : 0;
     event.preventDefault();
 
+
+
+    // Clear form fields
+    orderForm.reset();
     const item = document.getElementById('item').value;
-    const price = parseFloat(document.getElementById('price').value);
 
     // Update order summary
     const listItem = document.createElement('li');
@@ -16,9 +23,6 @@ document.getElementById('orderForm').addEventListener('submit', (event) => {
     // Update total earnings
     earnings += price;
     totalEarnings.textContent = earnings.toFixed(2);
-
-    // Clear form fields
-    orderForm.reset();
 });
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
