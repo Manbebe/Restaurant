@@ -2,6 +2,7 @@ const orderForm = document.getElementById('orderForm');
 const orderSummary = document.getElementById('orderSummary');
 const totalEarnings = document.getElementById('totalEarnings');
 let earnings = 0;
+let endgame = 100;
 
 document.getElementById('orderForm').addEventListener('submit', (event) => {
     const selectedItem = document.getElementById('item').value;
