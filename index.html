@@ -7,33 +7,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="title">Restaurant Menu</h1>
-    <div id="menu"></div>
-    <form id="orderForm">
-        <label for="item">Select Item:</label>
-        <!--Items in the drop down-->
-        <select id="item" name="item">
-            <option value="cheeseburger">Cheeseburger</option>
-            <option value="hamburger">Hamburger</option>
-            <option value="pizza">Pizza</option>
-            <option value="fries">Fries</option>
-            <option value="chickentenders">Chicken tenders</option>
+    <div class="container">
+        <h1>Restaurant</h1>
+        
+        <!-- Menu Section -->
+        <div class="menu">
+            <h2>Menu</h2>
+            <ul id="menu-list">
+                <!-- Dynamic menu items will be added here -->
+            </ul>
+        </div>
+        
+        <!-- Order Tracking Section -->
+        <div class="orders">
+            <h2>Orders</h2>
+            <table id="order-summary">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Ordered</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Earnings Section -->
+        <div class="earnings">
+            <h2>Earnings</h2>
+            <p>Total Money Earned: $<span id="total-earnings">0</span></p>
+        </div>
+        
+        <!-- Inventory Section -->
+        <div class="inventory">
+            <h2>Stock</h2>
+            <ul id="inventory-list">
+                <!-- Dynamic inventory items will be added here -->
+            </ul>
+        </div>
+        
+        <!-- Buttons -->
+        <div class="controls">
+            <button id="start-btn">Start Day</button>
+            <button id="buy-btn">Restock Food</button>
+            <button id="skip-btn">Skip Day</button>
+        </div>
+    </div>
 
-        </select>
-        <!-- Form fields for ordering -->
-        <button type="submit">Place Order</button>
-    </form>
-    <div id="results">
-        <h2>Order Summary</h2>
-        <ul id="orderSummary"></ul>
-    </div>
-    <div id="earnings">
-        <h2>Total Earnings: $
-            <span id="totalEarnings">0</span>
-        </h2>
-    </div>
-    <button id="restockButton">Restock</button>
-    <button id="skipDayButton">Skip Day</button>
     <script src="script.js"></script>
 </body>
 </html>
