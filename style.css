@@ -1,80 +1,56 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px
+}
+
+h1{
     text-align: center;
 }
 
-h1 {
-    color: #333;
+.menu, .orders, .earnings, .inventory{
+    margin: 20px 0;
 }
 
-#title {
-    display: flex;
-    height: 100px;
-    border: 1px solid #ccc;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 20px auto;
-}
-
-#menu {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
-    margin: 20px auto;
-    background-color: #fff;
-    text-align: left;
-}
-
-#menu div {
-    padding: 5px 0;
-    border-bottom: 1px solid  #353935;
-}
-
-#menu div:last-child {
-    border-bottom: none;
-}
-
-form {
-    margin: 20px auto;
-    width: 300px;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
+button{
+    background-color: green;
     color: white;
+    padding: 10px 20px;
+    margin: 5px;
     border: none;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: darkgreen;
 }
 
-#results {
-    margin: 20px auto;
-    width: 300px;
-    background-color: #fff;
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border:1px solid black;
+}
+
+th, td {
     padding: 10px;
-    border: 1px solid #ccc;
+    text-align: center;
 }
 
-#orderForm {
-    margin-bottom: 20px;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-#results, #earnings {
-    margin-bottom: 20px;
+li{
+    padding: 5px 0;
 }
