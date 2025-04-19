@@ -32,6 +32,10 @@ button:hover {
     background-color: darkgreen;
 }
 
+button:active{
+ background-color: rgb(0, 60, 0);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
