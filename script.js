@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 5, name: "CheeseCake", price: 15, stock: 10 },
     ];
 
-    // Hidden item with 1% chance to be ordered
+    // Hidden item with 0.1% chance to be ordered
     const hiddenItem = {
         name: "Him",
         price: 1000, 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Stop the day 
     document.getElementById("skip-day-btn").onclick = function() {
         if (!dayInProgress) {
-            alert("No day in progress!");
+            alert("You know there's no day in progress right? start a day first.");
             return;
         }
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (gameOver) return; // If game over, stop the orders
 
         // 1% chance of getting the hidden item
-        if (Math.random() < 0.01) {
+        if (Math.random() < 0.001) {
             // The Hidden Item is ordered
             handleHiddenItem();
         } else {
@@ -87,12 +87,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 // If out of stock, trigger game over
                 gameOver = true;
                 clearInterval(orderInterval); // Stop further orders
-                alert(`Game Over! You ran out of stock for ${randomItem.name}.`);
-                document.getElementById("start-day-btn").textContent = "Game Over! Start a new day.";
+                alert(`You lost lad. You ran out of stock for ${randomItem.name}. WAKE UP`);
+                document.getElementById("start-day-btn").textContent = "You lost. Press stop day THAN start day";
             }
         }
     }
-
+    
+    alert(greet("Player"));
     // Handle the hidden item order, screen goes black and closes tab
     function handleHiddenItem() {
         // Hide all the UI elements
@@ -129,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Restock food and spend money
     document.getElementById("buy-food-btn").onclick = function() {
         if (gameOver) {
-            alert("You lost. An item ran out of stock. Try getting off your phone and manage your restaurant. Start a new day to play again.");
+            alert("You lost. An item ran out of stock. Try getting off your phone and manage your restaurant. Stop the day and then Start a new day to play again.");
             return;
         }
 
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     item.stock += 10; // Restock by 10 items
                     totalEarnings -= cost; // Spend money
                 } else {
-                    alert("Not enough money to restock!");
+                    alert("Your broke right now. EARN MORE MONEY THAN RESTOCK!");
                 }
             }
         });
@@ -200,7 +201,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initial dashboard update
     updateDashboard();
-    
+    function greet(name) {
+        return `Welcome, ${name}! This is my game know as the restaurant. All you have to do is keep an items stock and restock when a specific item becomes less than or equal to 3. Oh and one more thing, look out for {Redacted}. Have fun!.`;
+    }
+
 });
 
 window.addEventListener('DOMContentLoaded', () => {
