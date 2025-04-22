@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Menu items (hidden item is added as a special "item/event")
     const menu = [
-        { id: 1, name: "Pizza", price: 10, stock: 10 },
+        { id: 1, name: "Fries", price: 3, stock: 10 },
         { id: 2, name: "Burger", price: 5, stock: 10 },
         { id: 3, name: "Salad", price: 7, stock: 10 },
+        { id: 4, name: "Pizza", price: 10, stock: 10 },
+        { id: 5, name: "CheeseCake", price: 15, stock: 10 },
     ];
 
     // Hidden item with 1% chance to be ordered
@@ -35,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (gameOver) {
                 // Reset game state when starting a new day after game over
                 resetGame();
-                alert("Starting a new game!");
+                alert("Loading new game.");
             } else {
-                alert("The day is already in progress!");
+                alert("Read the button there is a day literally going on.");
             }
             return;
         }
@@ -127,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Restock food and spend money
     document.getElementById("buy-food-btn").onclick = function() {
         if (gameOver) {
-            alert("Game Over! An item ran out of stock! Start a new day to play again.");
+            alert("You lost. An item ran out of stock. Try getting off your phone and manage your restaurant. Start a new day to play again.");
             return;
         }
 
