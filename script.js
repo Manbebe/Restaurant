@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    alert(greet("Player"));
+   
     // Handle the hidden item order, screen goes black and closes tab
     function handleHiddenItem() {
         // Hide all the UI elements
@@ -201,10 +201,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initial dashboard update
     updateDashboard();
-    function greet(name) {
-        return `Welcome, ${name}! This is my game know as the restaurant. You as the ${name} have to do is keep an item in stock and restock when a specific item like becomes less than or equal to 3. Oh and one more thing, look out for {Redacted}. Have fun!.`;
+    character = "player"
+    him = "{Redacted}"
+    
+    function showFirstAlert(name) {
+        return `Welcome, ${name}! This is my game know as the restaurant. You as the ${name} have to do is keep an item in stock and restock when a specific item like becomes less than or equal to 3.`;
     }
+    alert(showFirstAlert(character));
 
+    function showSecondAlert(creator) {
+        return `Oh and one more thing, look out for ${creator}. Have fun!.`
+    }
+    alert(showSecondAlert(him))
 });
 
 window.addEventListener('DOMContentLoaded', () => {
