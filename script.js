@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 3, name: "Salad", price: 7, stock: 10 },
         { id: 4, name: "Pizza", price: 10, stock: 10 },
         { id: 5, name: "CheeseCake", price: 15, stock: 10 },
+    
     ];
 
     // Hidden item with 0.1% chance to be ordered
@@ -205,7 +206,8 @@ document.addEventListener("DOMContentLoaded", function() {
     him = "{Redacted}"
     
     function showFirstAlert(name) {
-        return `Welcome, ${name}! This is my game know as the restaurant. You as the ${name} have to do is keep an item in stock and restock when a specific item like becomes less than or equal to 3.`;
+        return `Welcome, ${name}! This is my game know as the restaurant. 
+        You as the ${name} have to do is keep an item in stock and restock when a specific item like becomes less than or equal to 3.`;
     }
     alert(showFirstAlert(character));
 
