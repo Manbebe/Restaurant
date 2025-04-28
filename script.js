@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function generateRandomOrder() {
         if (gameOver) return; // If game over, stop the orders
 
-        // 1% chance of getting the hidden item
+        // 0.1% chance of getting the hidden item
         if (Math.random() < 0.001) {
             // The Hidden Item is ordered
             handleHiddenItem();
